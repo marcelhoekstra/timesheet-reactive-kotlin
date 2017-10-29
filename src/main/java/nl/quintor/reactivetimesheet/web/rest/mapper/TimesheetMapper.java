@@ -25,19 +25,16 @@ public class TimesheetMapper {
 
     @PostConstruct
     public void postConstruct() {
-        System.out.println("post...");
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
 
         Provider<Timesheet> personProvider = new AbstractProvider<Timesheet>() {
             public Timesheet get() {
-                System.out.println("create");
                 return Timesheet.builder().build();
             }
         };
 
         Provider<TimesheetDto> dtoProvider = new AbstractProvider<TimesheetDto>() {
             public TimesheetDto get() {
-                System.out.println("create");
                 return TimesheetDto.builder().build();
             }
         };

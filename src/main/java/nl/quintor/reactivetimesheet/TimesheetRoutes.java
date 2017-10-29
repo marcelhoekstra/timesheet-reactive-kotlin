@@ -1,7 +1,6 @@
 package nl.quintor.reactivetimesheet;
 
 import lombok.RequiredArgsConstructor;
-import nl.quintor.reactivetimesheet.repository.MedewerkerRepository;
 import nl.quintor.reactivetimesheet.repository.TimesheetRepository;
 import nl.quintor.reactivetimesheet.web.rest.dto.TimesheetDto;
 import nl.quintor.reactivetimesheet.web.rest.mapper.TimesheetMapper;
@@ -19,9 +18,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Transactional
 public class TimesheetRoutes {
-
     private final TimesheetRepository timesheetRepository;
-    private final MedewerkerRepository medewerkerRepository;
     private final TimesheetMapper timesheetMapper;
 
     @GetMapping(path = "/timesheets")
