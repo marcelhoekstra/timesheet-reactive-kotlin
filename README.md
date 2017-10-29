@@ -1,4 +1,2 @@
-# timesheet-reactive
-Spring 5 Flux version of Timesheet
-
-This version is using Lombok, Java and is based on Spring boot
+# timesheet-reactive-kotlin
+Timesheet version using Spring 5 and Kotlin
